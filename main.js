@@ -40,12 +40,12 @@ fontmin.run(function (err, files) {
   const str = JSON.stringify(result);
   fs.writeFile(exportPath + "/code.json", str, function (err) {
     if (err) {
-      res.status(500).send("Server is error...");
+      console.log("error...");
     }
   });
   fs.writeFile(exportPath + "/index.html", getHtml(txt), function (err) {
     if (err) {
-      res.status(500).send("Server is error...");
+      console.log("error...");
     }
   });
 });
